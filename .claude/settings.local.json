@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Bash(python -m pytest app/tests -v)",
+      "Bash(python -c \"from app.main import app; print\\('FastAPI app loaded successfully'\\)\")",
+      "Bash(python -c \"from app.database import init_db; from app.db.models import *; init_db\\(\\); print\\('Database initialized successfully'\\)\")",
+      "Bash(python -c \"from app.main import app; print\\('FastAPI app with database loaded successfully'\\)\")",
+      "Bash(python -m scripts.seed_data)",
+      "Bash(uv run *)"
+    ]
+  }
+}
