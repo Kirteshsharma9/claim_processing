@@ -6,7 +6,12 @@ Insurance claims processing system with automated coverage rule adjudication.
 
 ```bash
 # Install dependencies
+uv venv
+source .venv/bin/activate
+# Installation Commands 
 pip install -r requirements.txt
+# or
+uv sync
 
 # Run the server (database auto-initializes)
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
